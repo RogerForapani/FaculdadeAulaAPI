@@ -1,0 +1,23 @@
+<p>trueapi works!</p>
+
+<button (click)="novoUser()">Novo Usuario</button>
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users |async">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td ><button (click)="editar(user)">Editar</button></td>
+            <td ><button (click)="deletar(user)">Deletar</button></td>
+        </tr>
+        
+    </tbody>
+</table>
